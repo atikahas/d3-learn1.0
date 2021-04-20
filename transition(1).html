@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<body>
+
+<!-- load the d3.js library -->    
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<script>
+
+var svg = d3.select("body") // Select the body element
+    .append("svg")          // Append an SVG element to the body
+    .attr("width", 960)     // make it 960 pixels wide
+    .attr("height", 250)    // make it 500 pixels high
+    .append("circle")       // append a cicle to the svg
+    .attr("fill", "green")   // fill the circle with 'blue'
+    .attr("r", 20)          // set the radius to 10 pixels
+    .attr('cx', 20)         // position the circle at 40 on the x axis
+    .attr('cy', 80)        // position the circle at 250 on the y axis
+    .transition()           // apply a transition
+    .duration(4000)         // apply it over 4000 milliseconds
+    .attr('cx', 920);       // new horizontal position at 920 on x axis
+
+</script>
+
+<script> //become bigger and change colour
+
+    var svg = d3.select("body") // Select the body element
+    .append("svg") // Append an SVG element to the body
+    .attr("width", 960) // make it 960 pixels wide
+    .attr("height", 250) // make it 500 pixels high
+    .append("circle") // append a circle to the svg
+    .style("fill", "blue") // fill the circle with 'blue'
+    .attr("r", 20) // set the radius to 10 pixels
+    .attr('cx', 20) // position the circle at 40 on the x axis
+    .attr('cy', 80) // position the circle at 250 on the y axis
+
+    // 1st transition
+    .transition() // apply a transition
+    .duration(4000) // apply it over 4000 milliseconds
+    .attr('cx', 920) // new horizontal position at 920 on x axis 
+
+    // 2nd transition
+    .transition() // apply a transition
+    .duration(4000) // apply it over 4000 milliseconds
+    .attr('r', 40) // new radius of 40 pixels
+
+    // 3rd transition
+    .transition() // apply a transition
+    .duration(4000) // apply it over 4000 milliseconds
+    .style('fill', "red"); // new colour red
+
+</script>
+
+<script>
+
+    var svg = d3.select("body")
+            .append("svg")
+            .attr("width", 960)
+            .attr("height", 250);
+    
+    function circleTransition() { 
+    
+        var timeCircle = svg.append("circle")
+            .attr("fill", "purple")
+            .attr("r", 20);
+        repeat();
+        
+        function repeat() {
+          timeCircle
+            .attr('cx', 20)      // position the circle at 40 on the x axis
+            .attr('cy', 80)     // position the circle at 250 on the y axis
+            .transition()        // apply a transition
+            .duration(2000)      // apply it over 2000 milliseconds
+            .attr('cx', 920)     // move the circle to 920 on the x axis
+            .transition()        // apply a transition
+            .duration(2000)      // apply it over 2000 milliseconds
+            .attr('cx', 40)      // return the circle to 40 on the x axis
+            .on("end", repeat);  // when the transition finishes start again
+        };
+    
+    };
+    
+    circleTransition();
+    
+    </script>
+
+
+<br>
+<p>Transition</p>
+
+<br>
+<button onclick="document.location='index.html'">Main Menu</button>
+</body>
