@@ -82,6 +82,10 @@ svg.selectAll("dot")
     .data(data)
     .enter().append("circle")
     .attr("r", 5)
+    .style("fill", function(d) {            // <== Add these
+          if (d.close <= 400) {return "red"}  // <== Add these
+          else { return "black" }             // <== Add these
+    ;})                                     // <== Add these
     .attr("cx", function(d) { return x(d.date); })
     .attr("cy", function(d) { return y(d.close); });
 
