@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<h1>Text</h1>
+
+<body>
+<!-- load the d3.js library -->
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<div class="row">
+<div class="column">
+<script>  
+    var holder = d3.select("body") // select the 'body' element
+    .append("svg") // append an SVG element to the body
+    .attr("width", 300) // make the SVG element 449 pixels wide
+    .attr("height", 300); // make the SVG element 249 pixels high
+
+// draw a circle fill
+    holder.append("circle") // attach a circle
+    .attr("cx", 200) // position the x-centre
+    .attr("cy", 100) // position the y-centre
+    .attr("r", 50) // set the radius
+    .style("fill", "red"); // set the fill colour
+</script></div>
+
+<div class="column">
+<script>
+    var holder = d3.select("body") // select the 'body' element
+    .append("svg") // append an SVG element to the body
+    .attr("width", 300) // make the SVG element 449 pixels wide
+    .attr("height", 300); // make the SVG element 249 pixels high
+
+// draw a cricle stroke
+    holder.append("circle") // attach a circle
+    .attr("cx", 200) // position the x-centre
+    .attr("cy", 100) // position the y-centre
+    .attr("r", 50) // set the radius
+    .style("stroke", "red") // set the line colour
+    .style("fill", "none"); // set the fill colour
+</script></div>
+
+<div class="column">
+<script>
+    var holder = d3.select("body") // select the 'body' element
+    .append("svg") // append an SVG element to the body
+    .attr("width", 300) // make the SVG element 449 pixels wide
+    .attr("height", 300); // make the SVG element 249 pixels high
+    
+    // draw a circle opacity
+    holder.append("circle") // attach a circle
+    .attr("cx", 200) // position the x-centre
+    .attr("cy", 100) // position the y-centre
+    .attr("r", 50) // set the radius
+    .style("opacity", .2) // set the element opacity
+    .style("stroke", "red") // set the line colour
+    .style("fill", "green"); // set the fill colour
+
+</script></div>
+</div>
+
+
+<div class="row">
+    <div class="column">
+    <script>  
+        var holder = d3.select("body") // select the 'body' element
+        .append("svg") // append an SVG element to the body
+        .attr("width", 300) // make the SVG element 449 pixels wide
+        .attr("height", 300); // make the SVG element 249 pixels high
+    
+        // draw a circle fill-opacity
+        holder.append("circle") // attach a circle
+        .attr("cx", 200) // position the x-centre
+        .attr("cy", 100) // position the y-centre
+        .attr("r", 50) // set the radius
+        .style("fill-opacity", .2) // set the fill opacity
+        .style("stroke", "red") // set the line colour
+        .style("fill", "green"); // set the fill colour
+    </script></div>
+    
+    <div class="column">
+    <script>
+        var holder = d3.select("body") // select the 'body' element
+        .append("svg") // append an SVG element to the body
+        .attr("width", 300) // make the SVG element 449 pixels wide
+        .attr("height", 300); // make the SVG element 249 pixels high
+    
+    // draw a circle stroke opacity
+    holder.append("circle") // attach a circle
+    .attr("cx", 200) // position the x-centre
+    .attr("cy", 100) // position the y-centre
+    .attr("r", 50) // set the radius
+    .style("stroke-opacity", .2) // set the stroke opacity
+    .style("stroke", "red") // set the line colour
+    .style("fill", "none"); // set the fill colour
+    </script></div>
+    
+    <div class="column">
+    <script>
+        var holder = d3.select("body") // select the 'body' element
+        .append("svg") // append an SVG element to the body
+        .attr("width", 300) // make the SVG element 449 pixels wide
+        .attr("height", 300); // make the SVG element 249 pixels high
+        
+        // draw a circle stroke-width
+        holder.append("circle") // attach a circle
+        .attr("cx", 200) // position the x-centre
+        .attr("cy", 100) // position the y-centre
+        .attr("r", 50) // set the radius
+        .style("stroke-width", 5) // set the stroke width
+        .style("stroke", "red") // set the line colour
+        .style("fill", "none"); // set the fill colour
+    </script></div>
+</div>
+
+<div class="row">
+    <div class="column">
+    <script>  
+        var holder = d3.select("body") // select the 'body' element
+        .append("svg") // append an SVG element to the body
+        .attr("width", 300) // make the SVG element 449 pixels wide
+        .attr("height", 300); // make the SVG element 249 pixels high
+    
+        // draw a circle stroke-dasharray
+        holder.append("circle") // attach a circle
+        .attr("cx", 200) // position the x-centre
+        .attr("cy", 100) // position the y-centre
+        .attr("r", 50) // set the radius
+        .style("stroke-dasharray", ("10,3")) // make the stroke dashed
+        .style("stroke", "red") // set the line colour
+        .style("fill", "none"); // set the fill colour
+    </script></div>
+    
+    <div class="column">
+    <script>
+        var holder = d3.select("body") // select the 'body' element
+        .append("svg") // append an SVG element to the body
+        .attr("width", 300) // make the SVG element 449 pixels wide
+        .attr("height", 300); // make the SVG element 249 pixels high
+    
+    // draw a stroke-linecap
+    holder.append("line") // attach a line
+    .style("stroke", "black") // colour the line
+    .style("stroke-width", 20) // adjust line width
+    .style("stroke-linecap", "butt") // stroke-linecap type
+    .attr("x1", 100) // x position of the first end of the line
+    .attr("y1", 50) // y position of the first end of the line
+    .attr("x2", 300) // x position of the second end of the line
+    .attr("y2", 50); // y position of the second end of the line
+
+    holder.append("line") // attach a line
+    .style("stroke", "black") // colour the line
+    .style("stroke-width", 20) // adjust line width
+    .style("stroke-linecap", "round") // stroke-linecap type
+    .attr("x1", 100) // x position of the first end of the line
+    .attr("y1", 100) // y position of the first end of the line
+    .attr("x2", 300) // x position of the second end of the line
+    .attr("y2", 100); // y position of the second end of the line
+
+    holder.append("line") // attach a line
+    .style("stroke", "black") // colour the line
+    .style("stroke-width", 20) // adjust line width
+    .style("stroke-linecap", "square") // stroke-linecap type
+    .attr("x1", 100) // x position of the first end of the line
+    .attr("y1", 150) // y position of the first end of the line
+    .attr("x2", 300) // x position of the second end of the line
+    .attr("y2", 150); // y position of the second end of the line
+    </script></div>
+    
+    <div class="column">
+    <script>
+        var holder = d3.select("body") // select the 'body' element
+        .append("svg") // append an SVG element to the body
+        .attr("width", 300) // make the SVG element 449 pixels wide
+        .attr("height", 300); // make the SVG element 249 pixels high
+        
+        // draw a stroke line join
+        holder.append("polyline") // attach a polyline
+        .style("stroke", "black") // colour the line
+        .style("fill", "none") // remove any fill colour
+        .style("stroke-width", 20) // colour the line
+        .style("stroke-linejoin", "round") // shape the line join
+        .attr("points", "100,50, 200,150, 280,50"); // x,y points
+
+    </script></div>
+</div>
+
+<br>
+<button onclick="document.location='index.html'">Main Menu</button>
+
+</body>

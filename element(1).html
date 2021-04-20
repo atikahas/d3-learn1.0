@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<h1>Elements, Attributes and Styles</h1>
+
+<body>
+<!-- load the d3.js library -->
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<div class="row">
+<div class="column">
+<script>  
+    var holder = d3.select("body") // select the 'body' element
+    .append("svg") // append an SVG element to the body
+    .attr("width", 300) // make the SVG element 449 pixels wide
+    .attr("height", 300); // make the SVG element 249 pixels high
+
+// draw a circle
+    holder.append("circle") // attach a circle
+    .attr("cx", 100) // position the x-center
+    .attr("cy", 100) // position the y-center
+    .attr("r", 50); // set the radius
+</script></div>
+
+<div class="column">
+<script>
+    var holder = d3.select("body") // select the 'body' element
+    .append("svg") // append an SVG element to the body
+    .attr("width", 300) // make the SVG element 449 pixels wide
+    .attr("height", 300); // make the SVG element 249 pixels high
+
+// draw a ellipse
+    holder.append("ellipse") // attach an ellipse
+    .attr("cx", 100) // position the x-centre
+    .attr("cy", 100) // position the y-centre
+    .attr("rx", 80) // set the x radius
+    .attr("ry", 50); // set the y radius
+</script></div>
+
+<div class="column">
+<script>
+    var holder = d3.select("body") // select the 'body' element
+    .append("svg") // append an SVG element to the body
+    .attr("width", 300) // make the SVG element 449 pixels wide
+    .attr("height", 300); // make the SVG element 249 pixels high
+    
+    // draw a Rectangle
+    holder.append("rect") // attach a rectangle
+    .attr("x", 100) // position the left of the rectangle
+    .attr("y", 50) // position the top of the rectangle
+    .attr("height", 100) // set the height
+    .attr("width", 200); // set the width
+</script></div>
+</div>
+
+
+<div class="row">
+    <div class="column">
+    <script>  
+        var holder = d3.select("body") // select the 'body' element
+        .append("svg") // append an SVG element to the body
+        .attr("width", 300) // make the SVG element 449 pixels wide
+        .attr("height", 300); // make the SVG element 249 pixels high
+    
+        // draw a rectangle, curved corners
+        holder.append("rect") // attach a rectangle
+        .attr("x", 20) // position the left of the rectangle
+        .attr("y", 50) // position the top of the rectangle
+        .attr("height", 100) // set the height
+        .attr("width", 200) // set the width
+        .attr("rx", 10) // set the x corner curve radius
+        .attr("ry", 10); // set the y corner curve radius
+    </script></div>
+    
+    <div class="column">
+    <script>
+        var holder = d3.select("body") // select the 'body' element
+        .append("svg") // append an SVG element to the body
+        .attr("width", 300) // make the SVG element 449 pixels wide
+        .attr("height", 300); // make the SVG element 249 pixels high
+    
+    // draw a line
+    holder.append("line") // attach a line
+    .style("stroke", "black") // colour the line
+    .attr("x1", 50) // x position of the first end of the line
+    .attr("y1", 50) // y position of the first end of the line
+    .attr("x2", 200) // x position of the second end of the line
+    .attr("y2", 150); // y position of the second end of the line
+    </script></div>
+    
+    <div class="column">
+    <script>
+        var holder = d3.select("body") // select the 'body' element
+        .append("svg") // append an SVG element to the body
+        .attr("width", 300) // make the SVG element 449 pixels wide
+        .attr("height", 300); // make the SVG element 249 pixels high
+        
+        // draw a polyline
+        holder.append("polyline") // attach a polyline
+        .style("stroke", "black") // colour the line
+        .style("fill", "none") // remove any fill colour
+        .attr("points", "50,50, 150,150, 250,50"); // x,y points
+    </script></div>
+</div>
+
+
+<div class="row">
+    <div class="column">
+    <script>  
+        var holder = d3.select("body") // select the 'body' element
+        .append("svg") // append an SVG element to the body
+        .attr("width", 300) // make the SVG element 449 pixels wide
+        .attr("height", 300); // make the SVG element 249 pixels high
+    
+        // draw a polygon
+        holder.append("polygon") // attach a polygon
+        .style("stroke", "black") // colour the line
+        .style("fill", "none") // remove any fill colour
+        .attr("points", "50,50, 150,150, 250,50"); // x,y points
+    </script></div>
+    
+    <div class="column">
+    <script>
+        var holder = d3.select("body") // select the 'body' element
+        .append("svg") // append an SVG element to the body
+        .attr("width", 300) // make the SVG element 449 pixels wide
+        .attr("height", 300); // make the SVG element 249 pixels high
+    
+    // draw a Clipped Path
+        // define the clipPath
+        holder.append("clipPath") // define a clip path
+        .attr("id", "ellipse-clip") // give the clipPath an ID
+        .append("ellipse") // shape it as an ellipse
+        .attr("cx", 175) // position the x-centre
+        .attr("cy", 100) // position the y-centre
+        .attr("rx", 100) // set the x radius
+        .attr("ry", 50); // set the y radius
+
+        // draw clipped path on the screen
+        holder.append("rect") // attach a rectangle
+        .attr("x", 125) // position the left of the rectangle
+        .attr("y", 75) // position the top of the rectangle
+        .attr("clip-path", "url(#ellipse-clip)") // clip the rectangle
+        .style("fill", "lightgrey") // fill the clipped path with grey
+        .attr("height", 100) // set the height
+        .attr("width", 200); // set the width
+    </script></div>
+</div>
+
+<br>
+<button onclick="document.location='index.html'">Main Menu</button>
+
+</body>
