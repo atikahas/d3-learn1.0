@@ -10,6 +10,7 @@
 
 td, th {
     padding: 1px 4px;
+    border: 1px black solid;
 }
 
 </style>
@@ -94,7 +95,8 @@ svg.append("text")
 // The table generation function
 function tabulate(data, columns) {
     var table = d3.select("body").append("table")
-            .attr("style", "margin-left: 400px"),
+            .attr("style", "margin-left: 400px")
+            .style("border", "2px black solid"),
         thead = table.append("thead"),
         tbody = table.append("tbody");
 
